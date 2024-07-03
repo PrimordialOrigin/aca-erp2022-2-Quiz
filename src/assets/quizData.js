@@ -223,7 +223,7 @@ export const data = [
         option2:"API-Specific events",
         option3:"State change events",
         option4:"User interface events",
-        answer: b
+        answer: 2
     },
     {
         question:"Which are the events that have default actions that can be canceled by event handlers?",
@@ -247,7 +247,7 @@ export const data = [
         option2:"Not necessary",
         option3:"Few functions return values by default",
         option4:"some functions do not return any value",
-        answer: c
+        answer: 3
     },
     {
         question:"What are the three important manipulations done in a for loop on a loop variable?",
