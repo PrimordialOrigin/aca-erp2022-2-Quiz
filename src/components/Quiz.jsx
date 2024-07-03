@@ -1,16 +1,22 @@
+import React, {useState} from 'react';
+import {data} from '../assets/quizData';
 import './Quiz.css';
 
 function Quiz() {
+
+    let [questionIndex, setQuestionIndex] = useState(0);
+    let [question, setQuestion] = useState(data[questionIndex]);
+
     return(
         <div className='container'>
             <h1>Javascript Quiz</h1>
             <div className="itemsContainer">
-                <h3>1. What is JavaScript?</h3>
+                <h3>{questionIndex+1}. {question.question}</h3>
                 <ul>
-                    <li> JavaScript is a scripting language used to make the website interactive</li>
-                    <li>JavaScript is an assembly language used to make the website interactive</li>
-                    <li> JavaScript is a compiled language used to make the website interactive</li>
-                    <li>None of the mentioned</li>
+                    <li>{question.option1}</li>
+                    <li>{question.option2}</li>
+                    <li>{question.option3}</li>
+                    <li>{question.option4}</li>
                 </ul>
                 <button>Next question</button>
             </div>
