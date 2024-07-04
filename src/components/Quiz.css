@@ -1,5 +1,6 @@
 body{
     background-color: rgb(25, 25, 27);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +30,7 @@ h1{
 }
 
 .itemsContainer button{
-    background-color: rgb(5, 190, 193);
+    background-color: rgb(9, 216, 219);
     margin: 10px;
     position: relative;
     left: 35%;
@@ -40,10 +41,6 @@ h1{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-button:hover{
-    background-color: rgb(9, 150, 152);
 }
 
 .correct{
