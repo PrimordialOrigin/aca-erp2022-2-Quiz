@@ -1,8 +1,8 @@
 //DONT FORGET TO RESEARCH MORE ABOUT LOCALSTORAGE...COULD POSSIBLY USE IT TO SAVE THE QUIZ SCORE -0750HRS
 
 import React, {useRef, useState, useContext} from 'react';
-import {data} from '../assets/quizData';
-import { AppContext } from './Context';
+import {data} from '../../assets/quizData';
+import { AppContext } from '../Context';
 import './Quiz.css';
 
 function Quiz() {
