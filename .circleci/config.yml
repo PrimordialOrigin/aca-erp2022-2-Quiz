@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  vercel: vercel/now@1.0.1
+  heroku: circleci/heroku@0.0.10
 
 jobs:
   build:
@@ -19,10 +19,10 @@ jobs:
       #    command: npm run test
 
 workflows:
-  vercel_deploy:
+  heroku_deploy:
     jobs:
       - build
-      - vercel/deploy:
+      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
           requires:
             - build
           filters:
