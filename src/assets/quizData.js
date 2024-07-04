@@ -2,108 +2,108 @@
 
 export const data = [
     {
-        question:"What is JavaScript?",
-        option1:"JavaScript is a scripting language used to make the website interactive",
-        option2:"JavaScript is an assembly language used to make the website interactive",
-        option3:"JavaScript is a compiled language used to make the website interactive",
-        option4:"None of the mentioned",
-        answer: 1
-    },
-    {
-        question:"Which of the following is correct about JavaScript?",
-        option1:"JavaScript is an Object-Based language",
-        option2:"JavaScript is Assembly-language",
-        option3:"JavaScript is an Object-Oriented language",
-        option4:"JavaScript is a High-level language",
-        answer: 1
-    },
-    {
-        question:"Among the given statements, which statement defines closures in JavaScript?",
-        option1:" JavaScript is a function that is enclosed with references to its inner function scope",
-        option2:"JavaScript is a function that is enclosed with references to its lexical environmen",
-        option3:"JavaScript is a function that is enclosed with the object to its inner function scope",
-        option4:"None of the mentioned",
-        answer: 2
-    },
-    {
-        question:"Arrays in JavaScript are defined by which of the following statements?",
-        option1:"It is an ordered list of values",
-        option2:"It is an ordered list of objects",
-        option3:"It is an ordered list of stringe",
-        option4:"It is an ordered list of functions",
-        answer: 1
-    },
-    {
-        question:"Which of the following is not javascript data types?",
-        option1:"Null type",
-        option2:"Undefined type",
-        option3:"Number type",
-        option4:"None of the mentioned",
+        question:"Which of these terms best describes GitHub?",
+        option1:"Integrated Development Environment",
+        option2:"Distributed Version Control System",
+        option3:"Issues Tracking System",
+        option4:"Web-Based Repository Hosting Service",
         answer: 4
     },
     {
-        question:"Where is Client-side JavaScript code is embedded within HTML documents?",
-        option1:"A URL that uses the special javascript:code",
-        option2:"A URL that uses the special javascript:protocol",
-        option3:"A URL that uses the special javascript:encoding",
-        option4:"A URL that uses the special javascript:stack",
-        answer: 2
-    },
-    {
-        question:"Which of the following object is the main entry point to all client-side JavaScript features and APIs?",
-        option1:"Position",
-        option2:"Window",
-        option3:"Standard",
-        option4:"Location",
-        answer: 2
-    },
-    {
-        question:"Which of the following can be used to call a JavaScript Code Snippet?",
-        option1:"Function/Method",
-        option2:"Preprocessor",
-        option3:"Triggering Event",
-        option4:"RMI",
+        question:"What is the opposite of a GIT clone?",
+        option1:"git push",
+        option2:"git add",
+        option3:"git upload",
+        option4:"git status",
         answer: 1
     },
     {
-        question:"Which of the following explains correctly what happens when a JavaScript program is developed on a Unix Machine?",
-        option1:"will work perfectly well on a Windows Machine",
-        option2:"will be displayed as JavaScript text on the browser",
-        option3:"will throw errors and exceptions",
-        option4:"must be restricted to a Unix Machine only",
-        answer: 1
-    },
-    {
-        question:"Which of the following scoping type does JavaScript use?",
-        option1:"Sequential",
-        option2:"Segmental",
-        option3:"Lexical",
-        option4:"Literal",
-        answer: 3
-    },
-    {
-        question:"What is the basic difference between JavaScript and Java?",
-        option1:"Functions are considered as fields",
-        option2:"Functions are values, and there is no hard distinction between methods and fields",
-        option3:"Variables are specific",
-        option4:"There is no difference",
+        question:"What command do you run to view the commit history of your repository?",
+        option1:"git history",
+        option2:"git log",
+        option3:"git commit -h",
+        option4:"git past",
         answer: 2
     },
     {
-        question:"Why JavaScript Engine is needed?",
-        option1:" Both Compiling & Interpreting the JavaScript",
-        option2:" Parsing the javascript",
-        option3:"Interpreting the JavaScript",
-        option4:"Compiling the JavaScript",
+        question:"How do you check the state of your local git repository since your last commit?",
+        option1:"git check",
+        option2:"git status",
+        option3:"git commit",
+        option4:"git diff",
+        answer: 2
+    },
+    {
+        question:"What's a shortcut to staging all the changes you have?",
+        option1:"git commit add",
+        option2:"git commit",
+        option3:"git add",
+        option4:"git stage -a",
         answer: 3
     },
     {
-        question:"Which of the following methods/operation does javascript use instead of == and !=?",
-        option1:" JavaScript uses equalto()",
-        option2:" JavaScript uses equals() and notequals() instead",
-        option3:" JavaScript uses bitwise checkinge",
-        option4:" JavaScript uses === and !== instead",
+        question:"How do you supply a commit message to a commit?",
+        option1:"git message 'I am coding!'",
+        option2:"git add 'I am coding!'",
+        option3:"git commit 'I am coding!'",
+        option4:"git commit -m 'I am coding!'",
         answer: 4
+    },
+    {
+        question:"What's the git command that downloads your repository from GitHub to your computer?",
+        option1:"git push",
+        option2:"git fork",
+        option3:"git clone",
+        option4:"git commit",
+        answer: 3
+    },
+    {
+        question:"Which is the correct usage of the push command?",
+        option1:"git push <remote> <branch>",
+        option2:"git push <branch> <remote>",
+        option3:"Both correct",
+        option4:"None of them",
+        answer: 1
+    },
+    {
+        question:"What is the correct order to submit your changes from the working directory all the way to the remote repository?",
+        option1:"git add, git commit, git push",
+        option2:"git add, git push, git commit",
+        option3:"git commit, git add, git push",
+        option4:"git push, git add, commit",
+        answer: 1
+    },
+    {
+        question:"Which of the following commands show changes between commits?",
+        option1:"git commit",
+        option2:"git reset",
+        option3:"git diff",
+        option4:"git show",
+        answer: 3
+    },
+    {
+        question:"Which of the following commands join two or more development histories together?",
+        option1:"git merge",
+        option2:"git concat",
+        option3:"git join",
+        option4:"git branch",
+        answer: 1
+    },
+    {
+        question:"Which of the following commands is used in switching between branches?",
+        option1:"git checkout",
+        option2:"git switch",
+        option3:"git merge",
+        option4:"Boith A and B",
+        answer: 4
+    },
+    {
+        question:"Which of the following commands is used to reset the current HEAD to the specified state?",
+        option1:"git reset",
+        option2:"git restore",
+        option3:"git checkout",
+        option4:"git diff",
+        answer: 1
     },
     {
         question:"Why event handlers is needed in JS?",
