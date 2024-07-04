@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
 import './ScoreScreen.css'
-import {data} from '../assets/quizData';
-import { AppContext } from './Context';
+import {data} from '../../assets/quizData';
+import { AppContext } from '../Context';
 
 function ScoreScreen(){
     let { score, setScore} = useContext(AppContext);
