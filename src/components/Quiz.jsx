@@ -1,13 +1,15 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useContext} from 'react';
 import {data} from '../assets/quizData';
+import { AppContext } from './Context';
 import './Quiz.css';
 
 function Quiz() {
 
+    let {setQuizState, score, setScore} = useContext(AppContext);
     let [questionIndex, setQuestionIndex] = useState(0);
     let [question, setQuestion] = useState(data[questionIndex]);
     let [closed, setClosed] = useState(false);
-    let [score, setScore] = useState(0)
+    
 
     let option1 = useRef(null);
     let option2 = useRef(null);
@@ -51,19 +53,14 @@ function Quiz() {
         if(closed === true){
             setQuestionIndex(++questionIndex);
             setQuestion(data[questionIndex]);
-            setClosed(false);
-            //Reset the color scheme
-            myOptions.map((option) => {
-                option.current.classList.remove("wrong");
-                option.current.classList.remove("correct");
-                return null;
-            })
+            setQuizState("endGame");
         }
+        
     }
 
     return(
         <div className='container'>
-            <h1>Javascript Quiz</h1>
+            <h1>Quiz</h1>
             <div className="itemsContainer">
                 <h3>{questionIndex+1}. {question.question}</h3>
                 <ul>
@@ -77,7 +74,7 @@ function Quiz() {
                 ):(
                     <button onClick={next}>Next question</button>
                 )}
-            </div>
+            </div>  
         </div>
     )
 }
