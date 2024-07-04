@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
-import Quiz from './components/quiz/Quiz'
-import ScoreScreen from './components/scores/ScoreScreen';
+import Quiz from './components/Quiz'
+import ScoreScreen from './components/ScoreScreen';
 import { AppContext } from './components/Context';
 
 
