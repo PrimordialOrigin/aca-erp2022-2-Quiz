@@ -8,15 +8,22 @@ import BottomNav from './components/navigation/bottomnav';
 
 function App() {
   let [quizState, setQuizState] = useState("userForm");
+  const [name,setName] = useState("")
   let [score, setScore] = useState(0);
 
   return (
     <div className="App">
-      <AppContext.Provider value={{quizState, setQuizState, score, setScore}}>
-        {quizState === "userForm" && <User/>}
-        {quizState === "container" && <Quiz/>}
-        {quizState === "endGame" && <ScoreScreen/>}
-        <BottomNav />
+      <AppContext.Provider value={{quizState, setQuizState, score, setScore, name, setName}}>
+        <div style={{display: "flex",flexDirection: "column" ,gap: 10 }}>
+          <div>
+            {quizState === "userForm" && <User/>}
+            {quizState === "container" && <Quiz/>}
+            {quizState === "endGame" && <ScoreScreen/>}
+          </div>
+          <div>
+            <BottomNav />
+          </div>
+        </div>
       </AppContext.Provider> 
     </div>
   );

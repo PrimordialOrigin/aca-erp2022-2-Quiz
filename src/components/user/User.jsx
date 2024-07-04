@@ -10,42 +10,45 @@ import Typography from '@mui/material/Typography';
 import BasicBreadcrumbs from "../navigation/breadcrumbs";
 function User() {
     let {setQuizState} = useContext(AppContext);
+    let { setName} = useContext(AppContext);
     let [username, setUsername] = useState("");
 
-    function getName(event){
-        setUsername(event.target.value);
-    }
+   const handleClick = () => {
+    setName(username)
+    setQuizState("container")
+   }
 
     useEffect(() =>{
         localStorage.setItem("Name",JSON.stringify(username))
     }, [username]);
-    
-     const next = () => {setQuizState("container")}
+
+    const next = () => {setQuizState("container")}
+
   return (
     <div className="" style={{padding: 10}}>
         <BasicBreadcrumbs />
         <Card className="userForm">
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Word of the Day
+                    Welcome to
                 </Typography>
                 <Typography variant="h5" component="div">
-                Are a real progrommer lets see!!
+                The world of code
                 </Typography>
                 <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
+                    {" "}
                 </Typography>
                 <Typography variant="body2">
-                    well meaning and kindly.
+                    Enter you Name bellow to
                     <br />
-                    {'"a benevolent smile"'}
+                    continue
                 </Typography>
             </CardContent>
             <div className="item">
                 <Box
                     component="form"
                     sx={{
-                        '& > :not(style)': { m: 1, width: '90%' },
+                        '& > :not(style)': { m: 1, width: '50%' },
                     }}
                     noValidate
                     autoComplete="off"
@@ -55,7 +58,7 @@ function User() {
                 </div>
                 <div style={{padding: 5, paddingBottom: 10}}>
                     {username &&
-                        <Button variant="outlined">Continue</Button>
+                        <Button variant="outlined" onClick={handleClick}>Continue</Button>
                     }
             </div>
         </Card>

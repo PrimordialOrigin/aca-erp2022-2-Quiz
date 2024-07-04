@@ -4,6 +4,7 @@ import React, {useRef, useState, useContext} from 'react';
 import {data} from '../../assets/quizData';
 import { AppContext } from '../Context';
 import './Quiz.css';
+import { Button, Card, Typography } from '@mui/material';
 
 function Quiz() {
 
@@ -61,10 +62,16 @@ function Quiz() {
     }
 
     return(
-        <div className='container'>
-            <h1>Quiz</h1>
+    <div className="" style={{padding: 10}}>
+        <Card>
+            <Typography variant="h2" component="div">
+                Quiz
+            </Typography>
+            <Typography variant="h5" component="div">
+                {questionIndex+1}. {question.question}
+            </Typography>
+            <h3></h3>
             <div className="itemsContainer">
-                <h3>{questionIndex+1}. {question.question}</h3>
                 <ul>
                     <li ref={option1} onClick={(element)=>{checkMyAnswer(element,1)}}>{question.option1}</li>
                     <li ref={option2} onClick={(element)=>{checkMyAnswer(element,2)}}>{question.option2}</li>
@@ -72,12 +79,13 @@ function Quiz() {
                     <li ref={option4} onClick={(element)=>{checkMyAnswer(element,4)}}>{question.option4}</li>
                 </ul>
                 {questionIndex === data.length - 1 ? (
-                    <button onClick={done}>Last question</button>
+                    <Button onClick={done} variant="contained" style={{paddingLeft: 20, paddingRight:20, paddingTop: 5}}>Last question</Button>
                 ):(
-                    <button onClick={next}>Next question</button>
+                    <Button onClick={next} sx={{pl:10, pr:10}} style={{paddingLeft: 20, paddingRight:20, paddingTop: 5}} variant="contained">Next question</Button>
                 )}
             </div>  
-        </div>
+        </Card>
+    </div>  
     )
 }
 
