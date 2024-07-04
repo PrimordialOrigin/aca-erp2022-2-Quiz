@@ -17,7 +17,7 @@ function User() {
      const next = () => {setQuizState("container")}
   return (
     <div className="userForm">
-        <h1>WELCOME PARTICIPATION</h1>
+        <h1 className="test">WELCOME PARTICIPATION</h1>
         <div className="item">
             <input type="text" value={username} placeholder="Enter your name" onChange={getName}/>
             <button onClick={next}>Enter</button>

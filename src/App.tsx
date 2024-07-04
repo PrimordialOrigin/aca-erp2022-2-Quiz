@@ -3,7 +3,7 @@ import Quiz from './components/quiz/Quiz'
 import ScoreScreen from './components/scores/ScoreScreen';
 import { AppContext } from './components/Context';
 import User from './components/user/User';
-
+import "./components/Style.css"
 
 function App() {
   let [quizState, setQuizState] = useState("userForm");
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={{quizState, setQuizState, score, setScore}}>
-      {quizState === "userForm" && <User/>}
+        {quizState === "userForm" && <User/>}
         {quizState === "container" && <Quiz/>}
         {quizState === "endGame" && <ScoreScreen/>}
       </AppContext.Provider> 
