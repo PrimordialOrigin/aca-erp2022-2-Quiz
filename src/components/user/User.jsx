@@ -44,13 +44,18 @@ function User() {
             <Box
                 component="form"
                 sx={{
-                    '& > :not(style)': { m: 1, width: '95%' },
+                    '& > :not(style)': { m: 1, width: '90%' },
                 }}
                 noValidate
                 autoComplete="off"
                 >
-                <TextField id="outlined-basic" label="Name" variant="outlined" />
+                    <TextField onChange={(e)=>{setUsername(e.target.value)}} id="outlined-basic" label="Name" variant="outlined" />
                 </Box>
+            </div>
+            <div style={{padding: 5, paddingBottom: 10}}>
+                {username &&
+                    <Button variant="outlined">Continue</Button>
+                }
             </div>
         </Card>
     </div>

@@ -4,6 +4,7 @@ import ScoreScreen from './components/scores/ScoreScreen';
 import { AppContext } from './components/Context';
 import User from './components/user/User';
 import "./components/Style.css"
+import BottomNav from './components/navigation/bottomnav';
 
 function App() {
   let [quizState, setQuizState] = useState("userForm");
@@ -15,6 +16,7 @@ function App() {
         {quizState === "userForm" && <User/>}
         {quizState === "container" && <Quiz/>}
         {quizState === "endGame" && <ScoreScreen/>}
+        <BottomNav />
       </AppContext.Provider> 
     </div>
   );
