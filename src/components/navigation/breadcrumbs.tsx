@@ -13,7 +13,7 @@ export default function BasicBreadcrumbs() {
     <div role="presentation" style={{color: "white"}} onClick={handleClick}>
       <Breadcrumbs style={{color: "white"}} aria-label="breadcrumb">
         <Link underline="hover" style={{color: "white"}} href="/">
-          <p className='text-yellow-300' >Home</p>
+          <p>Home</p>
         </Link>
         <Link
           underline="hover"

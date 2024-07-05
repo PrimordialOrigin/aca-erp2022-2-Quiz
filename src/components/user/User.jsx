@@ -45,16 +45,18 @@ function User() {
                 </Typography>
             </CardContent>
             <div className="item">
-                <Box
-                    component="form"
-                    sx={{
-                        '& > :not(style)': { m: 1, width: '50%' },
-                    }}
-                    noValidate
-                    autoComplete="off"
-                    >
-                        <TextField onChange={(e)=>{setUsername(e.target.value)}} id="outlined-basic" label="Name" variant="outlined" />
-                </Box>
+                <div className="lg:w-[100%] flex justify-center w-[90%]">
+                    <Box
+                        component="form"
+                        sx={{
+                            '& > :not(style)': { m: 1, width: '100%' },
+                        }}
+                        noValidate
+                        autoComplete="off"
+                        >
+                            <TextField onChange={(e)=>{setUsername(e.target.value)}} id="outlined-basic" label="Name" variant="outlined" />
+                    </Box>
+                </div>
                 </div>
                 <div style={{padding: 5, paddingBottom: 10}}>
                     {username &&
