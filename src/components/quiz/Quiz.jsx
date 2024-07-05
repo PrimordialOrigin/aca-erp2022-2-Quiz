@@ -67,16 +67,34 @@ function Quiz() {
             <Typography variant="h2" component="div">
                 Quiz
             </Typography>
-            <Typography variant="h5" component="div">
-                {questionIndex+1}. {question.question}
-            </Typography>
+            <div style={{padding: 25}}>
+                <Typography variant="h5" component="div">
+                    {questionIndex+1}. {question.question}
+                </Typography>
+            </div>
             <h3></h3>
             <div className="itemsContainer">
                 <ul>
-                    <li ref={option1} onClick={(element)=>{checkMyAnswer(element,1)}}>{question.option1}</li>
-                    <li ref={option2} onClick={(element)=>{checkMyAnswer(element,2)}}>{question.option2}</li>
-                    <li ref={option3} onClick={(element)=>{checkMyAnswer(element,3)}}>{question.option3}</li>
-                    <li ref={option4} onClick={(element)=>{checkMyAnswer(element,4)}}>{question.option4}</li>
+                    <li ref={option1} onClick={(element)=>{checkMyAnswer(element,1)}}>
+                        <Typography variant="body2">
+                            {question.option1}
+                        </Typography>
+                    </li>
+                    <li ref={option2} onClick={(element)=>{checkMyAnswer(element,2)}}>
+                        <Typography variant="body2">
+                            {question.option2}
+                        </Typography>
+                    </li>
+                    <li ref={option3} onClick={(element)=>{checkMyAnswer(element,3)}}>
+                        <Typography variant="body2">
+                            {question.option3}
+                        </Typography>
+                    </li>
+                    <li ref={option4} onClick={(element)=>{checkMyAnswer(element,4)}}>
+                        <Typography variant="body2">
+                            {question.option1}
+                        </Typography>
+                    </li>
                 </ul>
                 {questionIndex === data.length - 1 ? (
                     <Button onClick={done} variant="contained" style={{paddingLeft: 20, paddingRight:20, paddingTop: 5}}>Last question</Button>
