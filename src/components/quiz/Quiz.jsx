@@ -27,7 +27,7 @@ function Quiz() {
                 // Remove the 'wrong' class after 2 seconds
                 setTimeout(() => {
                     element.target.classList.remove('correct');
-                }, 3000);
+                }, 2000);
             } else {
                 element.target.classList.add('wrong');
                 myOptions[question.answer - 1].current.classList.add('correct');
@@ -51,7 +51,7 @@ function Quiz() {
     };
 
     // Navigates to the next question
-    const next = () => {
+    const next = (element) => {
         if (closed) {
             resetColors();
             if (questionIndex < data.length - 1) {
@@ -100,7 +100,7 @@ function Quiz() {
                             Last question
                         </Button>
                     ) : (
-                        <Button onClick={next} sx={{ pl: 10, pr: 10 }} style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 5 }} variant="contained">
+                        <Button onClick={(element)=>next(element)} sx={{ pl: 10, pr: 10 }} style={{ paddingLeft: 20, paddingRight: 20, paddingTop: 5 }} variant="contained">
                             Next question
                         </Button>
                     )}
