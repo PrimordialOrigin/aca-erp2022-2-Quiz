@@ -27,6 +27,7 @@ export default function BottomNav() {
         sx={{ width: 785 }}
       >
         <BottomNavigationAction label="Back" onClick={handleBack} icon={<ArrowBackIosIcon />} />
+        <BottomNavigationAction label="Back" onClick={handleBack} icon={<ArrowBackIosIcon />} />
         <BottomNavigationAction label="Material" icon={<LibraryBooksIcon />} />
         <BottomNavigationAction label={!name ? "user" : name } icon={<AccountCircleIcon />} />
       </BottomNavigation>
